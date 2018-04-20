@@ -26,7 +26,7 @@ img_captcha_base64 = driver.execute_async_script("""
 with open(r"captcha.jpg", 'wb') as f:
     f.write(base64.b64decode(img_captcha_base64))
 cap = captcha.cap("captcha.jpg")
-password.send_keys("0521158427")
-username.send_keys("96521092")
+password.send_keys("your_username")
+username.send_keys("your_pass")
 captcha_input.send_keys(cap.txt)
 driver.find_element_by_id("login_btn_submit").click()
