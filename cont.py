@@ -21,8 +21,8 @@ for i in range(21):
     except:
         break
 lst.sort(key = lambda x:priorities[x.text.split('|')[-1]])
-            try:
-                lst[0].click()
-            except:
-                pass
+try:
+    lst[0].click()
+except:
+    pass
 
