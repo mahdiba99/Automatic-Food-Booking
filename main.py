@@ -27,8 +27,8 @@ img_captcha_base64 = driver.execute_async_script("""
 with open(r"captcha.jpg", 'wb') as f:
     f.write(base64.b64decode(img_captcha_base64))
 cap = captcha.cap("captcha.jpg")
-password.send_keys("0371774616")
-username.send_keys("96521011")
+password.send_keys("your_username")
+username.send_keys("yuor_pass")
 captcha_input.send_keys(cap.txt)
 driver.find_element_by_id("login_btn_submit").click()
 driver.find_element_by_xpath('//img[@alt="/res?id=reserve48x48.png&dl=false&uId=132993"]').click()
@@ -90,6 +90,7 @@ select_list = select(week_foods,love_list)
 for item in select_list:
     driver.find_element_by_id("userWeekReserves.selected" + str(item.id)).click()
 driver.find_element_by_id("doReservBtn").click()
+driver.close()
 
 # else:
             #     day = sorted(day, key=lambda h: (h.price))
